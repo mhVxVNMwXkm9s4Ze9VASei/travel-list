@@ -20,10 +20,23 @@ function Logo() {
 }
 
 function Form() {
+	function handleSubmit(event) {
+		event.preventDefault();
+	}
+
 	return (
-		<div className="add-form">
+		<form
+			className="add-form"
+			onSubmit={handleSubmit}
+		>
 			<h3>What do you need for your 😍 trip?</h3>
-		</div>
+			<input
+				type="number"
+				placeholder="Quantity..."
+				min="1"
+			/>
+			<button>Add</button>
+		</form>
 	);
 }
 
