@@ -25,6 +25,7 @@ export default function PackingList({
 			sortedItems = items
 				.slice()
 				.sort((a, b) => Number(a.packed) - Number(b.packed));
+			break;
 	}
 
 	return (
